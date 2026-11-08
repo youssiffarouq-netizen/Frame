@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+html {
+    color-scheme: light;
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
+body {
+    background: var(--page);
+    color: var(--Text);
+}
+
+html.dark body {
+    background: var(--dark-page);
+    color: var(--dark-text);
+}
+
+.dark {
+    --Scratch: var(--dark-scratch);
+    --Grain: var(--dark-grain);
+    --Vignette: var(--dark-vignette);
+}
+
+body {
+    font-family: 'Oldenburg', serif;
+ }
+
+/* main navy */
+/* :root {
+    --page: #F2F4FA;
+    --card: #D6DCEF;
+    --muted: #8C9BCB;
+    --secondary-navy: #3E4F9E;
+    --navy: #01298D;
+    --deep-navy: #011C60;
+} */
+
+:root {
+    --page: #DEDEDE;
+    --Card: #EBEBEB;
+    --Border: #B5B5B5;
+    --Text: #1E1E1E;
+    --Muted: #5C5C5C;
+    --Accent: #262626;
+    --Accent-hover: #404040;
+    --On-accent: #EBEBEB;
+    --Error: #A32A22;
+    --myShadow: rgba(0, 0, 0, 0.14);
+
+    --dark-page: #161616;
+    --Dark-card: #1E1E1E;
+    --dark-border: #3A3A3A;
+    --dark-text: #D6D6D6;
+    --dark-muted: #8E8E8E;
+    --dark-accent: #DCDCDC;
+    --dark-accent-hover: #BDBDBD;
+    --dark-on-accent: #161616;
+    --dark-error: #F0958C;
+    --mydark-shadow: rgba(255, 255, 255, 0.075);
+}
+
+
+
+
+:root {
+    --page: #E8E0D5;
+    --Card: #F3EDE4;
+    --Border: #C8BEB4;
+    --Text: #35152F;
+    --Muted: #756875;
+    --Accent: #35152F;
+    --Accent-hover: #512447;
+    --On-accent: #F3EDE4;
+    --Error: #A32A22;
+    --myShadow: rgba(53, 21, 47, 0.14);
+    --dark-page: #1C141B;
+        --Dark-card: #271D26;
+        --dark-border: #4A3B49;
+        --dark-text: #F0E7DC;
+        --dark-muted: #B3A5B2;
+        --dark-accent: #E6D3C0;
+        --dark-accent-hover: #FFF0DF;
+        --dark-on-accent: #251D25;
+        --dark-error: #F0958C;
+        --mydark-shadow: rgba(0, 0, 0, 0.28);
+}
+
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -100%;
+    z-index: 99999;
+    pointer-events: none;
+    opacity: 0.14;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.2 -0.2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    animation: film-grain 0.6s steps(1) infinite;
+}
+
+
+
+@keyframes film-grain {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-6%, 9%);
+    }
+
+    40% {
+        transform: translate(8%, -5%);
+    }
+
+    60% {
+        transform: translate(-3%, -10%);
+    }
+
+    80% {
+        transform: translate(10%, 4%);
+    }
+}
+
+html.dark body::before {
+    opacity: 0.16;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    body::before,
+    body::after {
+        animation: none;
+    }
+}

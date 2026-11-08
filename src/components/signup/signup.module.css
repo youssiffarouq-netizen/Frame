@@ -1,0 +1,32 @@
+.style {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* .style::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -150px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px double var(--Accent);
+    background-color: var(--Border);
+    z-index: -1;
+}
+
+.style::before {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    right: -150px;
+    width: 300px;
+    height: 300px;
+    background-color: var(--Accent);
+    border: 10px double var(--Border);
+    border-radius: 50%;
+    z-index: -1;
+}
+ */
